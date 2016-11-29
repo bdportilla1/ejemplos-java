@@ -1,0 +1,4 @@
+Bryant;Portilla;10;15
+Diego;Pinto;5;18
+Andrea;Mena;20;20
+Karen;Torres;13;1

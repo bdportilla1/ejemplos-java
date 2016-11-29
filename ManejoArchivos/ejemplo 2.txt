@@ -1,0 +1,4 @@
+brya|port|1,00|1,00
+
+diego|pintasfo|3,00|2,00
+
