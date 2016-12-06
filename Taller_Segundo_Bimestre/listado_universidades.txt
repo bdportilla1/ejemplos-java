@@ -1,0 +1,11 @@
+		Comercial Ventas y Reventas
+Nombre: bryan
+Ciudad: loja
+-----------------------------------
+Producto		Cant		Precio
+ARROZ		10		25,00
+ACEITE		2		2,60
+SAL		2		2,00
+----------------------------------------			Subtotal: 29,60
+			IVA: 4,14
+			TOTAL: 33,74
