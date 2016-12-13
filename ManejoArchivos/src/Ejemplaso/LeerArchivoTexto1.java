@@ -5,7 +5,6 @@ package Ejemplaso;
 // CÓMO PROGRAMAR EN J AVA . Séptima edición
 // fines educativos
 // Prueba de la clase ArchivoTexto.
-
 // Este programa lee un archivo de texto y muestra cada registro.
 import lecturaArchivos.*;
 import java.io.File;
@@ -37,52 +36,42 @@ public class LeerArchivoTexto1 {
         double promedio[] = new double[4];
         double promedio_final = 0;
         double alto = 0;
-        double suma2= 0;
-        String alto2 ="";
+        double suma2 = 0;
+        String alto2 = "";
         int c = 0;
 
         try // lee registros del archivo, usando el objeto Scanner
         {
             while (entrada.hasNext()) {
                 String linea = entrada.nextLine();
-                 System.out.println(linea);
+                System.out.println(linea);
                 ArrayList<String> linea_partes = new ArrayList<String>(Arrays.asList(linea.split(";")));
                 System.out.println(linea_partes);
-                
-               
-                
-                for (int i=2; i<(linea_partes.size()-1); i++){
-                    c=0;
+
+                for (int i = 2; i < (linea_partes.size() - 1); i++) {
+                    c = 0;
                     promedio[c] = 0;
-                    
-                    promedio[c] = (promedio[c] + Double.parseDouble(linea_partes.get(i))+ Double.parseDouble(linea_partes.get(i+1))) / 2;
+
+                    promedio[c] = (promedio[c] + Double.parseDouble(linea_partes.get(i)) + Double.parseDouble(linea_partes.get(i + 1))) / 2;
                     System.out.printf("El promedio de %s es %.2f\n", linea_partes.get(0), promedio[c]);
                     promedio_final = promedio_final + promedio[c];
-                    
-                    if (alto<promedio[c]){
-                    alto = promedio[c];
-                    alto2 = linea_partes.get(0);
+
+                    if (alto < promedio[c]) {
+                        alto = promedio[c];
+                        alto2 = linea_partes.get(0);
                     }
-                    c= c+1;
+                    c = c + 1;
                 }
-                
 
             } // fin de while
-            
-           
+
             promedio_final = promedio_final / (promedio.length);
-            
-            
-            
-            
-            
-            
+
             System.out.println("------------------------------------------------------");
             System.out.printf("El promedio del curso es: %.2f\n", promedio_final);
             System.out.printf("El promedio de %s mas alto es: %.2f\n", alto2, alto);
             System.out.println("------------------------------------------------------");
-       
-            
+
         } // fin de try
         catch (NoSuchElementException elementException) {
             System.err.println("El archivo no esta bien formado.");
